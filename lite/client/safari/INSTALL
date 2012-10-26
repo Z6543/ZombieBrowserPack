@@ -1,0 +1,3 @@
+The safari extension can be created from the chrome extension.
+
+You have to remove the cookieEvent function, because there is no API in Safari to access cookies (only via plain javascript :-( ). Pack the extension into crx, upload it into www.extensionfactory.com/labs/conversion and download the functional Safari extension :-)

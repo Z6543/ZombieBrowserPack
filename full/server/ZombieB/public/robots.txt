@@ -1,0 +1,59 @@
+User-Agent: *
+Disallow: /
+
+User-Agent: Bender
+Allow: /kill/all/humans
+
+User-Agent: T-800
+Allow: /I/need/your/clothes/boots/motorcycle
+
+User-agent: Other robots
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+
+
+					  .-.
+                     (   )
+                      '-'
+                      J L
+                      | |
+                     J   L
+                     |   |
+                    J     L
+                  .-'.___.'-.
+                 /___________\
+            _.-""'           `bmw._
+          .'                       `.
+        J                            `.
+       F                               L
+      J                                 J
+     J                                  `
+     |                                   L
+     |                                   |
+     |                                   |
+     |                                   J
+     |                                    L
+     |                                    |
+     |             ,.___          ___....--._
+     |           ,'     `""""""""'           `-._
+     |          J           _____________________`-.
+     |         F         .-'   `-88888-'    `Y8888b.`.
+     |         |       .'         `P'         `88888b \
+     |         |      J       #     L      #    q8888b L
+     |         |      |             |           )8888D )
+     |         J      \             J           d8888P P
+     |          L      `.         .b.         ,88888P /
+     |           `.      `-.___,o88888o.___,o88888P'.'
+     |             `-.__________________________..-'
+     |                                    |
+     |         .-----.........____________J
+     |       .' |       |      |       |
+     |      J---|-----..|...___|_______|
+     |      |   |       |      |       |
+     |      Y---|-----..|...___|_______|
+     |       `. |       |      |       |
+     |         `'-------:....__|______.J
+     |                                  |
+      L___                              |
+          """----...______________....--'

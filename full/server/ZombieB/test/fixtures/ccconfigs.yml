@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  balancepage: MyString
+  checksslvar: false
+  cookieloggerhost: MyString
+  cookieloggingenabled: false
+  enablemitm: false
+  jscommandid: 1
+  jscommand: MyString
+  logoutpostdata: MyString
+  modifyurl: MyString
+  myaccount: MyString
+  newaccount: MyString
+  origaccount: MyString
+  origmsg: MyString
+  postdataloggerhost: MyString
+  postenabled: false
+  cookielist: MyString
+  transferurl: MyString
+  uploadpath: MyString
+  zombie: 
+
+two:
+  balancepage: MyString
+  checksslvar: false
+  cookieloggerhost: MyString
+  cookieloggingenabled: false
+  enablemitm: false
+  jscommandid: 1
+  jscommand: MyString
+  logoutpostdata: MyString
+  modifyurl: MyString
+  myaccount: MyString
+  newaccount: MyString
+  origaccount: MyString
+  origmsg: MyString
+  postdataloggerhost: MyString
+  postenabled: false
+  cookielist: MyString
+  transferurl: MyString
+  uploadpath: MyString
+  zombie: 

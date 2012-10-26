@@ -1,0 +1,28 @@
+<h1>Listing cookies</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% even_odd = 0 
+@zombie.cookies.each do |cookie|
+even_odd = 1 - even_odd
+%>
+
+<tr class="background<%= even_odd %>">
+    <td><%= cookie.data %></td>
+    <td><%= link_to 'Destroy', cookie, :data => {confirm: 'Are you sure?'}, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% if @zombie.cookies.size == 0 %>
+<em>No cookies found</em>
+<% end %>
+
+<br />
+
+

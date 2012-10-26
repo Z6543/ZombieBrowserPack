@@ -1,0 +1,11 @@
+This script is written to install the scripts into windows chrome only.
+Because of a bug (http://crbug.com/41902), which is in Chrome for a long time, there is no other easy way to install the extension, only via registry hacking. :-(
+
+A lot of stuff is hardcoded into the script, needs a cleanup.
+
+You might also need bypassuac on Win7/Vista before running this script, you can find it in metasploit.
+
+At least change these lines in install_extension_chrome_windows.rc:
+err = client.fs.file.upload(homepath,"/media/sf_Pentest/flash_playerX/svn/trunk/chrome.crx")  # change this to the location of the chrome extension
+key = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Google\\Chrome\\Extensions\\hhmdhapnoibganohhpfafpikfmbbpflk'  # change the extension id to the current id
+data = "C:" + homepath + "\\chrome.crx"		# change the extension name

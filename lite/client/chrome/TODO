@@ -1,0 +1,4 @@
+Chrome 23 (or some later version) won't be compatible with the eval part of the extension, needs some modification to do the same functionality.
+
+Basically I have to create a secure trusted https webserver, and put the javascript commands into those files, and execute them. 
+But the lite version is really not the kind of place where I want people to configure https servers...

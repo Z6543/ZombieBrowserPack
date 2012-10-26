@@ -1,0 +1,42 @@
+﻿<h1>Listing zombies</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Os</th>
+    <th>Browser</th>
+    <th>Browserversion</th>
+    <th>Updated at</th>
+    <!-- <th>Hashid</th>   -->
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% even_odd = 0 
+@zombies.each do |zombie| 
+even_odd = 1 - even_odd
+%>
+
+  <tr class="background<%= even_odd %>">
+    <td><%= zombie.username %></td>
+    <td><%= image_tag zombie.os + ".png" %> </td>
+    <td><%= image_tag zombie.browsername + ".png" %> </td>
+    <td><%= zombie.browserversion %></td>
+    <td><%= zombie.updated_at %></td>
+    <!-- <td><%= zombie.hashid %></td>   -->
+    <td><%= link_to 'Show', zombie %></td>
+    <td><%= link_to 'Edit zombie', edit_zombie_path(zombie) %></td>
+    <td><%= link_to 'Edit config', edit_ccconfig_path(zombie.ccconfig) %></td>
+    <td><%= link_to 'Demo', {:controller => "ccconfigs", :action => "demo", :id => zombie.ccconfig.id } %></td>
+    <td><%= link_to 'Destroy', zombie, :data => {confirm: 'Are you sure?'}, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Zombie', new_zombie_path %>|
+<%= link_to 'Destroy all cookies', cookies_removeall_path %>|
+<%= link_to 'Destroy all postinfo', postinfos_removeall_path %>|

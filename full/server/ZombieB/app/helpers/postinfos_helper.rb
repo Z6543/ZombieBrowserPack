@@ -1,0 +1,2 @@
+module PostinfosHelper
+end

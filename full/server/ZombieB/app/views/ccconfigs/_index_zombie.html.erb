@@ -1,0 +1,82 @@
+<h1>Listing ccconfig</h1>
+
+<table>
+  <tr>
+	<th>Jscommand</th>
+	<th>Jscommandid</th>    
+    <th>Balancepage</th>
+    <th>Checksslvar</th>
+   
+  </tr>
+
+
+  <tr>
+	<td><%= @zombie.ccconfig.jscommand %></td>
+    <td><%= @zombie.ccconfig.jscommandid %></td>
+    <td><%= @zombie.ccconfig.balancepage %></td>
+    <td><%= @zombie.ccconfig.checksslvar %></td>
+    
+  </tr>
+  <tr> <th>Cookieloggerhost</th>
+    <th>Cookieloggingenabled</th>
+    <th>Enablemitm</th>    
+    <th>Logoutpostdata</th>
+    
+  </tr>
+  <tr>
+  <td><%= @zombie.ccconfig.cookieloggerhost %></td>
+    <td><%= @zombie.ccconfig.cookieloggingenabled %></td>
+    <td><%= @zombie.ccconfig.enablemitm %></td>
+    <td><%= @zombie.ccconfig.logoutpostdata %></td>
+    
+   </tr>
+  
+  <tr>
+  <th>Modifyurl</th>
+      <th>Myaccount</th>
+    <th>Newaccount</th>
+    <th>Origaccount</th>
+    
+  <tr>
+ <td><%= @zombie.ccconfig.modifyurl %></td>
+ <td><%= @zombie.ccconfig.myaccount %></td>
+    <td><%= @zombie.ccconfig.newaccount %></td>
+    <td><%= @zombie.ccconfig.origaccount %></td>
+    
+  <tr>
+  <th>Origmsg</th>
+    <th>Postdataloggerhost</th>
+    <th>Postenabled</th>
+    <th>Cookielist</th>
+    
+  </tr>
+  <tr>
+  <td><%= @zombie.ccconfig.origmsg %></td>
+    <td><%= @zombie.ccconfig.postdataloggerhost %></td>
+    <td><%= @zombie.ccconfig.postenabled %></td>
+    <td><%= @zombie.ccconfig.cookielist %></td>
+  </tr>
+  <tr>
+  <th>Transferurl</th>
+    <th>Uploadpath</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+    <tr>
+    <td><%= @zombie.ccconfig.transferurl %></td>
+    <td><%= @zombie.ccconfig.uploadpath %></td>
+    </tr>
+  
+  <tr>
+    <td><%= link_to 'Edit config', edit_ccconfig_path(@zombie.ccconfig) %></td>
+</tr>
+  <tr>  
+  <td><%= link_to 'Destroy_config', @zombie.ccconfig, :data => {confirm: 'Are you sure?'}, method: :delete %></td>
+  </tr>
+
+</table>
+
+<br />
+
+

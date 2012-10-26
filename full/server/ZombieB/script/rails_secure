@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby.exe
+# This command will automatically be run when you run "rails" with Rails 3 gems installed from the root of your application.
+
+
+require 'rubygems'
+require 'rails/commands/server'
+require 'rack'
+require 'webrick'
+require 'webrick/https'
+
+module Rails
+    class Server < ::Rack::Server
+        def default_options
+            super.merge({
+                :Port => 443,
+				:Host => "0.0.0.0",
+                :environment => (ENV['RAILS_ENV'] || "development").dup,
+                :daemonize => false,
+                :debugger => false,
+                :SSLEnable => true,
+                :SSLVerifyClient => OpenSSL::SSL::VERIFY_NONE,
+                :SSLPrivateKey => OpenSSL::PKey::RSA.new(
+                       File.open("c:\\sites\\server_key.pem").read),
+                :SSLCertificate => OpenSSL::X509::Certificate.new(
+                       File.open("c:\\sites\\server_crt.pem").read),
+                :SSLCertName => [["CN", WEBrick::Utils::getservername]]
+            })
+        end
+    end
+end 
+
+APP_PATH = File.expand_path('../../config/application',  __FILE__)
+require File.expand_path('../../config/boot',  __FILE__)
+require 'rails/commands'

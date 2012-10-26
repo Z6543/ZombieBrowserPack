@@ -1,0 +1,11 @@
+<h1>Editing ccconfig</h1>
+<%= csrf_meta_tag %> 
+<br/>
+<%= link_to 'Back to Demo', {:controller => "ccconfigs", :action => "demo", :id => @zombie.ccconfig.id } %>
+<br/><br/>
+<%= render 'form' %>
+
+<%= link_to 'Show', @ccconfig %> |
+<%= link_to 'Back', zombies_path %> |
+<%= link_to 'Back to zombie', @zombie %>
+

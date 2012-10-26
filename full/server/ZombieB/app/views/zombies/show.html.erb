@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @zombie.username %>
+</p>
+
+<p>
+  <b>Os:</b>
+  <%= @zombie.os %>
+</p>
+
+<p>
+  <b>Browsername:</b>
+  <%= @zombie.browsername %>
+</p>
+
+<p>
+  <b>Browserversion:</b>
+  <%= @zombie.browserversion %>
+</p>
+
+<p>
+  <b>Last updated:</b>
+  <%= @zombie.updated_at %>
+</p>
+
+<p>
+  <b>Hashid:</b>
+  <%= @zombie.hashid %>
+</p>
+<br/>
+
+<%= link_to 'Edit zombie', edit_zombie_path(@zombie) %> |
+<%= link_to 'Back', zombies_path %>
+
+<br/>
+
+<%= render "ccconfigs/index_zombie" %>
+<%= render "cookies/index_zombie" %>
+<%= render "postinfos/index_zombie" %>
+
+<br/>

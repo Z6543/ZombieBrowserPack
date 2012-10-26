@@ -1,0 +1,21 @@
+﻿+----------------------------------------------------------------------------------+---------------------------+---------------------------+-----------------------------------+
+|                                                                                  |          Firefox          |          Chrome           |              Safari               |
++----------------------------------------------------------------------------------+---------------------------+---------------------------+-----------------------------------+
+| Password stealing                                                                | supported                 | supported                 | supported                         |
+| Cookie stealing                                                                  | supported                 | supported                 | if cookie not httponly            |
+| Remote control from server                                                       | supported                 | supported                 | supported                         |
+| Stealing passwords from built-in password manager                                | supported                 | google hack?              | missing API?                      |
+| Uploading files from client to server                                            | supported                 | possible via NPAPI, todo  | missing API?                      |
+| Downloading files from server to client                                          | supported                 | possible via NPAPI, todo  | missing API?                      |
+| Executing executable                                                             | supported                 | possible via NPAPI, todo  | missing API?                      |
+| Disabling browser blocklist update                                               | supported                 | possible via NPAPI, todo  | missing API?                      |
+| Geolocation                                                                      | supported                 | supported                 | missing API?                      |
+| Playing ogg music in browser                                                     | supported                 | supported                 | supported                         |
+| Text to speech                                                                   | missing API?              | supported                 | missing API?                      |
+| javascript - Man-in-the browser (rewrite content)                                | supported                 | supported                 | supported                         |
+| javascript - Sending HTTP request to a server and send response back to attacker | supported                 | supported                 | never tested?                     |
+| javascript - change flash config and spy on webcam                               | supported                 | possible via NPAPI, todo  | ?                                 |
+| DDOS                                                                             | possible, won't implement | possible, won't implement | possible, won't implement         |
+| send spam via webmail                                                            | possible, won't implement | possible, won't implement | possible, won't implement         |
+| distributed password cracking                                                    | possible in Windows       | supported                 | javascript only, poor performance |
++----------------------------------------------------------------------------------+---------------------------+---------------------------+-----------------------------------+

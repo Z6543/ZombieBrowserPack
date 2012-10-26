@@ -1,0 +1,11 @@
+If you want to use another botnet control server (and not static.cache.l.google.com-safebrowsing.hu), open background.js, and replace every 127.0.0.1 string to the server name of yours.
+
+There are many ways to install the extension into chrome.
+
+The first one is the developer mode in chrome - extension menu, and browse to this directory.
+
+The other ways need to pack the extension, which can be done with the help of pack_extension.bat.
+
+If the crx file has been created, it can be installed either via the meterpreter autorun script, in case of older chrome versions (<=21), the crx can be hosted on third party site and installed by opening it from the browser. 
+
+This module also includes the distributed password hash cracking module in native client, idea and implementation by woFF.

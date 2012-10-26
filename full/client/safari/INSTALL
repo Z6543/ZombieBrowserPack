@@ -1,0 +1,10 @@
+The safari extension can be created from the chrome extension.
+
+You have to remove the cookieEvent function, because there is no API in Safari to access cookies (only via plain javascript :-( ). Also remove the native client module from the background.html. Pack the extension into crx, upload it into www.extensionfactory.com/labs/conversion and download the functional Safari extension 
+
+You also have to rename the browser type from chrome to safari in the background.js here:
++ encodeURIComponent("Chrome") 
+-->  
++ encodeURIComponent("Safari")
+
+

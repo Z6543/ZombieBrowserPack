@@ -1,0 +1,1 @@
+%Userprofile%\AppData\Local\Google\Chrome\Application\chrome.exe --pack-extension=path_to_chrome_extension --pack-extension-key="path_to_chrome_private_key\chrome.pem" --no-message-box

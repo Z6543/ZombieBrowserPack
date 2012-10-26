@@ -1,0 +1,15 @@
+Installation instructions:
+Step 1. Copy the contents of the webroot folder into a local webserver webroot. PHP (4 or 5) is only needed if you want to receive the passwords from postdata and the cookies. Check the php file permissions - the web server user should be the owner and should have read privileges, and write privileges in the folder. 
+Step 2. Start the webserver, check if http://127.0.0.1/c/1.json is reachable from the victim browser.
+Step 3. Install the extensions into the browsers. Simple drag-and-drop should work, or open the corresponding extension in the victim browser. Firefox has to be restarted.
+Step 4. Modify c/1.json in the webserver webroot to control the clients via JavaScript. Always increment jscommandid if you want to issue a new command. Escape special characters like " with \ .
+Step 5. Check the addcookie and addpostinfo folder for the cookie and password values.
+
+Limitations: 
+1. Firefox and Chrome only steals the two-factor authentication cookies from Google and Facebook (built-in limitation)
+2. Safari is not able to steal the cookies (cookies not protected via httponly could be stolen via javascript)
+3. The browsers show the user password in an alert box for the victim (built-in feature)
+
+Known bugs: 
+1. After reinstalling the plugins, sometimes the jscommandid has to be set to a greater value than used before, don't use 1 or 2 as jscommandid.
+2. Firefox will leave flashX.dat and flashX1.dat files in the users profile directory, even after uninstalling the extension.

@@ -1,0 +1,280 @@
+﻿.desc
+{
+    color: #6b6b6b;
+}
+.desc a
+{
+    color: #0092dd;
+}
+
+.bvddropdown
+{
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 12px;
+    color: #000;
+}
+
+.bvddropdown dd, .bvddropdown dt, .bvddropdown ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+.bvddropdown dd
+{
+    position: relative;
+}
+
+.bvddropdown a, .bvddropdown a:visited
+{
+    color: #816c5b;
+    text-decoration: none;
+    outline: none;
+}
+.bvddropdown a:hover
+{
+    color: #5d4617;
+}
+.bvddropdown dt a:hover, .bvddropdown dt a:focus
+{
+    color: #5d4617;
+    border: 1px solid #5d4617;
+}
+
+.bvddropdown dt
+{
+    background: transparent url(http://api.bestvideodownloader.com/content/images/logo-icon.gif) no-repeat scroll 5px center;
+    margin: 0px 0px 10px 0px;
+    width: 172px;
+}
+
+.bvddropdown dt a
+{
+    background: transparent url(http://api.bestvideodownloader.com/content/images/arrow.png) no-repeat scroll right center;
+    display: block;
+    padding-left: 25px;
+    padding-right: 20px;
+    border: 1px solid #d4ca9a;
+}
+.bvddropdown dt a span
+{
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+}
+
+.bvddropdown dd ul
+{
+    background: #e4dfcb none repeat scroll 0 0;
+    border: 1px solid #d4ca9a;
+    border-bottom: 0px solid #d4ca9a;
+    color: #C5C0B0;
+    display: none;
+    left: 0px;
+    padding: 0px 0px;
+    position: absolute;
+    top: -8px;
+    width: auto;
+    min-width: 170px;
+    list-style: none;
+    z-index: 299;
+}
+
+.bvddropdown span.value
+{
+    display: none;
+}
+
+.bvddropdown dd ul li
+{
+    border-bottom: 1px solid #d4ca9a;
+}
+
+.bvddropdown dd ul li a
+{
+    padding: 5px;
+    display: block;
+}
+
+.bvddropdown dd ul li a:hover
+{
+    background-color: #d0c9af;
+}
+
+.bvddropdown img.flag
+{
+    border: none;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.flagvisibility
+{
+    display: none;
+}
+
+.bvddropdown .bvd-facebook-optIn
+{
+    border: 1px solid #133783;
+    top: -5px;
+    height: 30px;
+    width: 376px;
+    line-height: 30px;
+    position: relative;
+    padding: 0px 10px 0px 10px;
+    background-color: #3B5998;
+    color: #fff;
+}
+
+.bvd-enable-now
+{
+    float: right;
+    width: auto;
+    margin-right: 35px;
+    color: #1B0EFB;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bvd-enable-now a
+{
+    color: #fff;
+}
+
+.bvd-learn-more
+{
+    float: right;
+    width: auto;
+}
+
+.bvd-learn-more a, .bvd-learn-more a:visited, .bvd-learn-more a:hover, .bvd-learn-more a:active
+{
+    color: #fff;
+}
+
+/* YouTube */
+.yt-uix-button-menu a:focus
+{
+    outline: 0px solid #E7ECFA;
+}
+
+.yt-uix-padd
+{
+    display: block;
+    padding: 0px 0px 0px 15px;
+    margin: 0px;
+}
+.yt-uix-audio
+{
+    background-repeat: no-repeat;
+    background-image: url("http://api.bestvideodownloader.com/Content/images/menuIcons/Audio_icon.png");
+}
+
+.yt-uix-video
+{
+    background-repeat: no-repeat;
+    background-image: url("http://api.bestvideodownloader.com/Content/images/menuIcons/Video_icon.png");
+}
+
+.yt-uix-albumart
+{
+    background-repeat: no-repeat;
+    background-image: url("http://api.bestvideodownloader.com/Content/images/menuIcons/album-art_icon.png");
+}
+
+.yt-uix-help
+{
+    background-repeat: no-repeat;
+    background-image: url("http://api.bestvideodownloader.com/Content/images/menuIcons/help_icon.png");
+}
+
+ul#bvd_videoFormats
+{
+    border-bottom: 1px solid #999999;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul#bvd_videoFormats li
+{
+    border: 1px solid #999999;
+    border-bottom: 0px solid #999999;
+    margin: 0px;
+}
+
+#download-youtube-video-button
+{
+    background: url("http://downloader.bestvideodownloader.com/Content/images/button-gradient.gif") repeat-x;
+    width:150px;   
+}
+
+/* YouTube AdSupported_Splash */
+
+#BestVideoDownloader_AdSupported_Splash
+{
+    height: 30px;
+    margin: 0 0 10px;
+    overflow: hidden;
+    padding: 4px;
+    width: 629px;
+    background-color: #FFFDEE;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+}
+
+#Logo_AdSupported_Splash
+{
+    background: url("http://downloader.bestvideodownloader.com/Content/images/arrow-sprite.png") no-repeat scroll 0 5px transparent;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: 8px;
+    margin-right: 5px;
+    padding: 0;
+    width: 25px;
+}
+
+#Disclaimer_AdSupported_Splash
+{
+    color: #000000;
+    float: left;
+    font-size: 14px;
+    padding-left: 5px;
+    width: 340px;
+    display: block;
+    line-height: 28px;
+}
+
+#OptIn_AdSupported_Splash
+{
+    float: left;
+    line-height: 28px;
+    width: 110px;
+}
+
+#OptIn_AdSupported_Splash a, #OptIn_AdSupported_Splash a:visited
+{
+    color: #1B0EFB;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#LearnMore_AdSupported_Splash
+{
+    color: green;
+    float: right;
+    line-height: 28px;
+    padding-right: 15px;
+    text-align: right;
+    width: 120px;
+}
+
+#LearnMore_AdSupported_Splash a, #LearnMore_AdSupported_Splash a:visited
+{
+    color: #1B0EFB;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* END */

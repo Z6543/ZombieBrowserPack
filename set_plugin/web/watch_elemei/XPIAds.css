@@ -1,0 +1,64 @@
+﻿/* Home Page */
+#video-sidebar .bvd-ad-300x250
+{
+    margin:0px 0px 15px 0px;
+}
+
+/* Watch Page - Standard */
+#page.watch #watch-sidebar .bvd-ad-300x250
+{
+    margin:0px 0px 10px 0px;
+}
+
+/* Watch Page - Branded */
+#page.watch-branded #watch-sidebar .bvd-ad-300x250
+{
+    margin:0px 0px 15px 0px;
+}
+
+/* Watch Page - Related Videos*/
+#page.watch #watch-related .bvd-ad-300x250
+{
+    margin:10px 0px 15px -5px;
+}
+
+/* Watch Page - Branded - Related Videos*/
+#page.watch-branded #watch-related .bvd-ad-300x250
+{
+    margin:10px 0px 15px 0px;
+}
+
+/* Results Page */
+#search-pva .bvd-ad-300x250
+{
+    margin:0px 0px 15px 0px;
+}
+
+/* Music Page*/ /* Shows Page*/ /* Movies Page*/
+#browse-side-column .bvd-ad-300x250
+{
+    margin:0px 0px 15px -12px;
+}
+
+/* Trailers Page*/
+#recent-column .bvd-ad-300x250
+{
+    margin:0px 0px 15px 0px;
+}
+
+/* All Pages - Footer*/
+.bvd-ad-728x90
+{
+    margin:20px auto;
+    display:block;
+}
+
+#leftCol .bvd-ad-160x600
+{
+    margin:5px 0px 5px 5px;
+}
+
+#rightCol .bvd-ad-160x600
+{
+    margin:0px 0px 5px 35px;
+}

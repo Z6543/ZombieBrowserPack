@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby.exe
+# This command will automatically be run when you run "rails" with Rails 3 gems installed from the root of your application.
+
+
+#require 'rubygems'
+require 'rails/commands/server'
+require 'rack'
+#require 'webrick'
+#require 'webrick/https'
+
+module Rails
+    class Server < ::Rack::Server
+        def default_options
+            super.merge({
+                :Port => 80,
+				:Host => "0.0.0.0",
+                :environment => (ENV['RAILS_ENV'] || "development").dup,
+                :daemonize => false,
+                :debugger => false
+            })
+        end
+    end
+end 
+
+APP_PATH = File.expand_path('../../config/application',  __FILE__)
+require File.expand_path('../../config/boot',  __FILE__)
+require 'rails/commands'

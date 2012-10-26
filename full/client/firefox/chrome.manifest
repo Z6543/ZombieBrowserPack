@@ -1,0 +1,4 @@
+content   	flashx              		chrome/content/
+skin    	flashx    	classic/1.0    	chrome/skin/
+locale    	flashx		en-US 			chrome/locale/
+overlay 	chrome://browser/content/browser.xul  chrome://flashx/content/browserOverlay.xul

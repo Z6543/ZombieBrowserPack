@@ -1,0 +1,61 @@
+<h1>Listing ccconfigs</h1>
+
+<table>
+  <tr>
+    <th>Balancepage</th>
+    <th>Checksslvar</th>
+	<th>Loginhost</th>
+    <th>Cookieloggerhost</th>
+    <th>Cookieloggingenabled</th>
+    <th>Enablemitm</th>
+    <th>Jscommandid</th>
+    <th>Jscommand</th>
+    <th>Logoutpostdata</th>
+    <th>Modifyurl</th>
+    <th>Myaccount</th>
+    <th>Newaccount</th>
+    <th>Origaccount</th>
+    <th>Origmsg</th>
+    <th>Postdataloggerhost</th>
+    <th>Postenabled</th>
+    <th>Cookielist</th>
+    <th>Transferurl</th>
+    <th>Uploadpath</th>
+    <th>Zombie</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ccconfigs.each do |ccconfig| %>
+  <tr>
+    <td><%= ccconfig.balancepage %></td>
+    <td><%= ccconfig.checksslvar %></td>
+    <td><%= ccconfig.loginhost %></td>
+	<td><%= ccconfig.cookieloggerhost %></td>
+    <td><%= ccconfig.cookieloggingenabled %></td>
+    <td><%= ccconfig.enablemitm %></td>
+    <td><%= ccconfig.jscommandid %></td>
+    <td><%= ccconfig.jscommand %></td>
+    <td><%= ccconfig.logoutpostdata %></td>
+    <td><%= ccconfig.modifyurl %></td>
+    <td><%= ccconfig.myaccount %></td>
+    <td><%= ccconfig.newaccount %></td>
+    <td><%= ccconfig.origaccount %></td>
+    <td><%= ccconfig.origmsg %></td>
+    <td><%= ccconfig.postdataloggerhost %></td>
+    <td><%= ccconfig.postenabled %></td>
+    <td><%= ccconfig.cookielist %></td>
+    <td><%= ccconfig.transferurl %></td>
+    <td><%= ccconfig.uploadpath %></td>
+    <td><%= ccconfig.zombie %></td>
+    <td><%= link_to 'Show', ccconfig %></td>
+    <td><%= link_to 'Edit', edit_ccconfig_path(ccconfig) %></td>
+    <td><%= link_to 'Destroy', ccconfig, :data => {confirm: 'Are you sure?'}, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ccconfig', new_ccconfig_path %>

@@ -1,0 +1,30 @@
+﻿<h1>Listing postinfos</h1>
+<%= link_to "Refresh",
+  :url => postinfos_url ,
+  :update => "postinfodiv" , :remote => true%>
+
+<div id="postinfodiv">
+<table>
+  <tr>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+    <% even_odd = 0 
+@zombie.postinfos.each do |postinfo| 
+even_odd = 1 - even_odd
+%>
+<tr class="background<%= even_odd %>">
+    <td><%= postinfo.data %></td>
+    <td><%= link_to 'Destroy', postinfo, :data => {confirm: 'Are you sure?'}, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% if @zombie.postinfos.size == 0 %>
+<em>No post data found</em>
+<% end %>
+</div>
+<br />
+

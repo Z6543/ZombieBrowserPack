@@ -1,0 +1,25 @@
+<%= form_for(@postinfo) do |f| %>
+  <% if @postinfo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postinfo.errors.count, "error") %> prohibited this postinfo from being saved:</h2>
+
+      <ul>
+      <% @postinfo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </div>
+  <div class="field">
+    <%= f.label :zombie %><br />
+    <%= f.text_field :zombie %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

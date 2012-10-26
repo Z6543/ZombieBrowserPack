@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZombieB</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'rails' %> 
+
+</head>
+<body BGCOLOR="#ff6600">
+<%= link_to image_tag("HackthePlanet312.gif"), {:action => 'index', :controller => 'zombies'} %>
+
+<%= yield %>
+
+</body>
+</html>

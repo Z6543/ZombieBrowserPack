@@ -1,0 +1,41 @@
+<%= form_for(@zombie) do |f| %>
+  <% if @zombie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zombie.errors.count, "error") %> prohibited this zombie from being saved:</h2>
+
+      <ul>
+      <% @zombie.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :os %><br />
+    <%= f.text_field :os %>
+  </div>
+  <div class="field">
+    <%= f.label :browsername %><br />
+    <%= f.text_field :browsername %>
+  </div>
+  <div class="field">
+    <%= f.label :browserversion %><br />
+    <%= f.text_field :browserversion %>
+  </div>
+    <div class="field">
+    <%= f.label :hashid %><br />
+    <%= f.text_field :hashid %>
+  </div>
+  <div class="field">
+    <%= f.label :lastseen %><br />
+    <%= f.datetime_select :lastseen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

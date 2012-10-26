@@ -1,0 +1,1 @@
+some parameters are not used from the server (cookieloggerhost, cookieloggingenabled, postdataloggerhost, etc.), have to check which ones, and use them appriopriately

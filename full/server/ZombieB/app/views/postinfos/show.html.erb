@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @postinfo.data %>
+</p>
+
+<p>
+  <b>Zombie:</b>
+  <%= @postinfo.zombie %>
+</p>
+
+
+<%= link_to 'Edit', edit_postinfo_path(@postinfo) %> |
+<%= link_to 'Back', postinfos_path %>

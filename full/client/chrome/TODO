@@ -1,1 +1,3 @@
-some parameters are not used from the server (cookieloggerhost, cookieloggingenabled, postdataloggerhost, etc.), have to check which ones, and use them appriopriately
+1. some parameters are not used from the server (cookieloggerhost, cookieloggingenabled, postdataloggerhost, etc.), have to check which ones, and use them appriopriately
+
+2. have to move the eval stuff to SSL and use manifest version 2 to be compatible with Chrome 23

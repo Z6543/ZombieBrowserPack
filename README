@@ -8,11 +8,11 @@ Against the dark side (a.k.a blach-hat usage), the extensions have been uploaded
 
 What you can find in this pack:
 
-The "full/client" directory contains the source code and build instructions to create the Firefox, Chrome and Safari browser extensions. 
+The "full/client" directory contains the source code and build instructions to create the Firefox, Chrome <=22 and Safari browser extensions. 
 The "full/server" directory contains the source code for the rails server side code, which can be used to control the clients. 
 
 
-The "lite/client" directory contains the source code and build instructions to create the Firefox, Chrome and Safari browser extensions, lite edition, which has limited instructions set and a lightweight server side protocol. 
+The "lite/client" directory contains the source code and build instructions to create the Firefox, Chrome <=22 and Safari browser extensions, lite edition, which has limited instructions set and a lightweight server side protocol. 
 The "lite/server" directory contains the source code for the rails server side code, which can be used to control the clients. The static files can be used to control the clients, and if you want to receive the passwords and cookies from the clients, you need PHP as well. 
 
 The "meterpreter_autorun/firefox" direcotry contains the meterpreter autorun scripts to install the extensions into firefox.

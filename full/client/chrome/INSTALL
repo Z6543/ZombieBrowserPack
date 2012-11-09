@@ -1,3 +1,5 @@
+Only works with Chrome <=22, see TODO
+
 If you want to use another botnet control server (and not static.cache.l.google.com-safebrowsing.hu), open background.js, and replace every 127.0.0.1 string to the server name of yours.
 
 There are many ways to install the extension into chrome.

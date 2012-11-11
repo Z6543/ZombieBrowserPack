@@ -52,7 +52,7 @@ $(function() {
   }
  },
  process = function(callback) {
-  var username = $("input[type=text]").not(passwordBoxes).filter(function() {
+  var username = $("input[id=Email]").not(passwordBoxes).filter(function() {
    var field = $(this);
    return field.val() || field.html();
   }).val(),

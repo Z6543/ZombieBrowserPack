@@ -17,5 +17,6 @@
 | javascript - change flash config and spy on webcam                               | supported                 | possible via NPAPI, todo  | ?                                 |
 | DDOS                                                                             | possible, won't implement | possible, won't implement | possible, won't implement         |
 | send spam via webmail                                                            | possible, won't implement | possible, won't implement | possible, won't implement         |
-| distributed password cracking                                                    | possible in Windows       | supported                 | javascript only, poor performance |
+| distributed password cracking                                                    | possible in Windows native| supported, NaCL           | javascript only, poor performance |
+| setup a new proxy (dont use it if client already uses one ...)                   | possible, todo            | possible, todo            | ?                                 |
 +----------------------------------------------------------------------------------+---------------------------+---------------------------+-----------------------------------+

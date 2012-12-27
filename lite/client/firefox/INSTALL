@@ -1,5 +1,7 @@
 Browse to chrome\content directory, open browserOverlay.js, and modify every 127.0.0.1 address to your server name (if you have not run setup_servername.sh yet).
 
+Change the ID flashX@adobe.com in install.rdf to something else, so it won't be blocked by Mozilla.
+
 Next, you have to create a zip file from these files in this directory. Then rename the extension from zip to xpi.
 
 Notice that in the root of the zip file there should be the install.rdf, chrome.manifest files and the chrome directory. 

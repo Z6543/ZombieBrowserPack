@@ -1,6 +1,6 @@
 {
   "name": "Zombie browser",
-  "version": "1.01",
+  "version": "1.0.1",
   "description": "Malicious add-on. For educational and testing purposes only! Don't use it if you don't have permission to do that.",
   "background": {
     "page": "background.html"

@@ -1,6 +1,6 @@
 {
   "name": "Zombie browser",
-  "version": "1.01",
+  "version": "1.0.1",
   "description": "Malicious browser extension",
 
   "manifest_version": 2,

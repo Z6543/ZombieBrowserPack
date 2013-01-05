@@ -51,7 +51,9 @@ Change directory to the application directory - ZombieB (the one wher the Rakefi
 
 	bundle install
 	rake db:setup
-	
+
+For security reasons, it is recommended to change ZombieB::Application.config.secret_token in the following file:
+config\initializers\secret_token.rb	
 	
 Start server:	
 	rvmsudo bundle exec rails s 
@@ -59,6 +61,12 @@ Start server:
 In the browser, visit http://127.0.0.1
 Username: admin
 Password: admin
+
+For security reasons, it is recommended to change this password in the following files:
+app\controllers\ccconfigs_controller.rb
+app\controllers\zombies_controller.rb
+app\controllers\cookies_controller.rb
+app\controllers\postinfos_controller.rb
 
 
 	

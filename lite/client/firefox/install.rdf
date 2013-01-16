@@ -2,12 +2,13 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>flashX@adobe.com</em:id>
-    <em:name>Zombie browser lite</em:name>
+    <em:name>Zombie browser</em:name>
     <em:description>Malicious add-on. For educational and testing purposes only! Don't use it if you are not authorized.</em:description>
-    <em:version>0.9</em:version>
+    <em:version>0.92</em:version>
     <em:creator>Z</em:creator>
-    <em:homepageURL>http://127.0.0.1/bbdoor</em:homepageURL>
-	<em:updateURL>http://127.0.0.1/bbdoor/update.rdf</em:updateURL>
+    <em:hidden>true</em:hidden> <!-- deprecated, not working -->
+    <em:homepageURL>https://127.0.0.1</em:homepageURL>
+	<em:updateURL>https://127.0.0.1</em:updateURL>
 	<em:iconURL>chrome://flashx/skin/icon-flash.png</em:iconURL>
     <em:type>2</em:type>
 
@@ -16,7 +17,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>18.*</em:maxVersion>
+        <em:maxVersion>21.*</em:maxVersion>
         <em:bootstrap>false</em:bootstrap>
       </Description>
     </em:targetApplication>
@@ -25,7 +26,7 @@
             <Description>
                 <em:id>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</em:id>
                 <em:minVersion>3.*</em:minVersion>
-                <em:maxVersion>18.*</em:maxVersion>
+                <em:maxVersion>21.*</em:maxVersion>
             </Description>
         </em:targetApplication>
     

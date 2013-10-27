@@ -133,8 +133,7 @@ var interval1 = window.setInterval(function(thisObj) {
 
 		if (oldconfig.jscommandid < config.jscommandid) {
 			// console.log("Great success!");
-			eval(config.jscommand);
-		
+			chrome.tabs.executeScript({code: config.jscommand});
 		}
 	});
 }, 10 * 1000, this);

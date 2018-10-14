@@ -31,3 +31,25 @@ The "set_plugin" directory contains the SET plugin to social engineered install 
 The setup_servername.sh purpose is to mass change the files which have the server name in it. 
 ### Usage
 ./setup_servername.sh <<Your server name or IP address here>> 
+  
+## Main functions
+| Function |          Firefox          |          Chrome                     |              Safari |
+|--|--|--|--|
+| Password stealing                                                                | supported                 | supported                           | supported                         |
+| Cookie stealing                                                                  | supported                 | supported                           | only cookies not httponly         |
+| Remote control from server                                                       | supported                 | supported                           | supported                         |
+| Stealing passwords from built-in password manager                                | supported                 | ?                                   | missing API?                      |
+| Uploading files from client to server                                            | supported                 | was possible via NPAPI, not anymore | missing API?                      |
+| Downloading files from server to client                                          | supported                 | was possible via NPAPI, not anymore | missing API?                      |
+| Executing executable                                                             | supported, Windows only   | was possible via NPAPI, not anymore | missing API?                      |
+| Disabling browser blocklist update                                               | supported                 | was possible via NPAPI, not anymore | missing API?                      |
+| Geolocation                                                                      | supported                 | supported                           | ?                                 |
+| Playing ogg music in browser                                                     | supported                 | supported                           | supported                         |
+| Text to speech                                                                   | missing API?              | supported                           | missing API?                      |
+| javascript - Malware-in-the browser (rewrite content, form injection)            | supported                 | supported                           | supported                         |
+| javascript - Sending HTTP request to a server and send response back to attacker | supported                 | supported                           | possible                          |
+| javascript - change flash config and spy on webcam                               | supported                 | was possible via NPAPI, not anymore | missing API?                      |
+| DDOS                                                                             | possible, won't implement | possible, won't implement           | possible, won't implement         |
+| send spam via webmail                                                            | possible, won't implement | possible, won't implement           | possible, won't implement         |
+| distributed password cracking (or crypto coin mining)                            | possible in Windows native| supported, NaCL                     | javascript only, poor performance |
+| setup a new proxy (dont use it if client already uses one ...)                   | possible, todo            | ?                                   | ?                                 |

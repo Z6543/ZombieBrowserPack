@@ -47,6 +47,7 @@ GEM
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.7.3)
+    libv8 (3.16.14.19)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -79,6 +80,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    ref (2.0.0)
     sass (3.1.20)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -88,18 +90,23 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.6)
     sqlite3 (1.3.6-x86-mingw32)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (0.15.4)
     tilt (1.3.3)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.33)
+    tzinfo (0.3.61)
     uglifier (1.2.6)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -110,4 +117,5 @@ DEPENDENCIES
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
   sqlite3
+  therubyracer
   uglifier (>= 1.0.3)
